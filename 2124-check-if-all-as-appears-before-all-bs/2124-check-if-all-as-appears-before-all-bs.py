@@ -1,13 +1,27 @@
 class Solution:
     def checkString(self, s: str) -> bool:
-                
-        a = [idx for idx, val in enumerate(s) if val == 'a']
-        b = [idx for idx, val in enumerate(s) if val == 'b']
+        
+        ls=list(s)
+        maxidxa=-1
+        if ls.count('a')==0:
+            return True
+        if ls.count('b')==0:
+            return True
+        if s.rindex("a")>s.index("b"):
+            return False
+        return True
+    
+        """  
+        time=59ms
+        a = [i for i, val in enumerate(s) if val == 'a']
+        b = [i for i, val in enumerate(s) if val == 'b']
         if len(a) == 0 or len(b) == 0:
             return True
         else:
             return max(a) < min(b)
         """
+        """
+        time=48ms
         i=0
         while s[i]=='a':
             i+=1
@@ -21,6 +35,7 @@ class Solution:
         """
        
         """
+        time=72ms
         l,r=0,len(s)-1
         if s==" ":
             return False
