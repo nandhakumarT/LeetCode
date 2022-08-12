@@ -1,6 +1,13 @@
 class Solution:
     def checkString(self, s: str) -> bool:
-        
+                
+        a = [idx for idx, val in enumerate(s) if val == 'a']
+        b = [idx for idx, val in enumerate(s) if val == 'b']
+        if len(a) == 0 or len(b) == 0:
+            return True
+        else:
+            return max(a) < min(b)
+        """
         i=0
         while s[i]=='a':
             i+=1
@@ -11,6 +18,7 @@ class Solution:
                 return False
             i+=1
         return True
+        """
        
         """
         l,r=0,len(s)-1
