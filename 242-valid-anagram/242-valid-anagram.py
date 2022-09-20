@@ -8,7 +8,9 @@ class Solution:
                 return True
         return False
         """
+        #successfilly worked
+
         s=sorted(s)
         t=sorted(t)
         return s==t  
-        
+    
