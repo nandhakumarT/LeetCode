@@ -8,6 +8,49 @@ class Solution:
         #if not then add right to charset
         #res should be r+l-1
         
+        
+        
+        
+        
+        
+        
+        
+        """
+        l,r=0,0
+        charset=set()
+        res=0
+        for i in range(len(s)):
+            if s[i]!=s[r]:
+                r+=1
+                charset.add(s[r])
+            else:
+                r=l
+                charset.remove(s[l])
+                
+                
+        res=max(res,r-l+1)
+        return res
+                
+                
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        """
         charset=set()
         l=0
         res=0
@@ -18,6 +61,6 @@ class Solution:
             charset.add(s[r])
             res=max(res,r-l+1)
         return res
-                    
+              
                     
         
